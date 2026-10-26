@@ -1,0 +1,247 @@
+{
+  "pack": "Dutcheyy Hard Rave Techno Serum 2 Blueprint",
+  "version": "1.0",
+  "tempo": 152,
+  "key": "G minor",
+  "important_note": "These are precise Serum 2 build specifications, not binary .SerumPreset files. Save each patch from Serum 2 after entering the settings.",
+  "patches": [
+    {
+      "name": "HR_KICK_001",
+      "role": "Kick body",
+      "oscA": "Basic Shapes sine, octave -2",
+      "env1": "A0 D180ms S0 R40ms",
+      "env2": "A0 D45ms S0 R0, route +48 semitones to Osc A coarse",
+      "filter": "MG Low 24, 180 Hz",
+      "fx": [
+        "Distortion Diode 2 drive 55% mix 80%",
+        "Compressor multiband gain +5 dB"
+      ],
+      "macros": {
+        "1": "Punch: Env2 pitch amount",
+        "2": "Drive",
+        "3": "Tail: Env1 decay",
+        "4": "Click: noise level"
+      }
+    },
+    {
+      "name": "HR_RUMBLE_001",
+      "role": "Rumble bass",
+      "oscA": "Basic Shapes sine, octave -2",
+      "oscB": "Basic Shapes saw, octave -2, level 18%",
+      "env1": "A0 D900ms S0 R250ms",
+      "filter": "MG Low 24, cutoff 145 Hz, drive 35%",
+      "fx": [
+        "Distortion Tube 60%",
+        "Compressor multiband 65%",
+        "Reverb hall size 55 decay 2.2s low cut 80 Hz high cut 2.5 kHz mix 38%",
+        "EQ low shelf +4 dB at 110 Hz"
+      ],
+      "macros": {
+        "1": "Rumble length",
+        "2": "Dirt",
+        "3": "Room",
+        "4": "Low-pass cutoff"
+      }
+    },
+    {
+      "name": "HR_OFFBEAT_BASS_001",
+      "role": "Offbeat bass",
+      "oscA": "Analog BD Saw, octave -2, unison 2 detune .05",
+      "oscB": "Basic Shapes square, octave -2, level 28%",
+      "env1": "A2ms D240ms S20% R70ms",
+      "filter": "MG Low 24 cutoff 220 Hz env2 +42",
+      "fx": [
+        "Distortion Soft Clip 70%",
+        "Compressor multiband 55%",
+        "EQ +3 dB 180 Hz, -3 dB 450 Hz"
+      ],
+      "macros": {
+        "1": "Bite filter envelope",
+        "2": "Drive",
+        "3": "Decay",
+        "4": "Width"
+      }
+    },
+    {
+      "name": "HR_REESE_001",
+      "role": "Wide mid-bass",
+      "oscA": "Analog saw, octave -1, unison 7 detune .10",
+      "oscB": "Analog saw, octave -1, fine -9 cents, unison 5",
+      "env1": "A5ms D500ms S75% R120ms",
+      "filter": "MG Low 12 cutoff 650 Hz",
+      "fx": [
+        "Distortion Tube 45%",
+        "Hyper 18%",
+        "Dimension 12%",
+        "Compressor multiband 45%"
+      ],
+      "macros": {
+        "1": "Movement: LFO1 to filter",
+        "2": "Aggression",
+        "3": "Width",
+        "4": "High cut"
+      }
+    },
+    {
+      "name": "HR_HOOVER_001",
+      "role": "Classic rave hoover",
+      "oscA": "Analog saw, octave 0, unison 9 detune .16",
+      "oscB": "Basic Shapes square, +7 semitones, unison 5 detune .11",
+      "env1": "A8ms D650ms S72% R180ms",
+      "env2": "A0 D320ms S0 route -12 semitones gently to both oscillators",
+      "filter": "MG Low 12 7.5 kHz",
+      "fx": [
+        "Distortion Tube 38%",
+        "Chorus rate .08 Hz depth 45% mix 28%",
+        "Hyper 22%",
+        "Dimension 18%",
+        "Compressor multiband 55%"
+      ],
+      "macros": {
+        "1": "Hoover pitch fall",
+        "2": "Detune",
+        "3": "Brightness",
+        "4": "Space"
+      }
+    },
+    {
+      "name": "HR_MAIN_LEAD_001",
+      "role": "Main rave lead",
+      "oscA": "Analog saw, octave 0, unison 9 detune .11",
+      "oscB": "Basic Shapes saw, octave +1, unison 5 detune .07, level 45%",
+      "noise": "BrightWhite level 10%, keytrack off",
+      "env1": "A4ms D600ms S68% R180ms",
+      "filter": "MG Low 12 10 kHz",
+      "fx": [
+        "Distortion Tube 35%",
+        "Hyper 30%",
+        "Dimension 15%",
+        "Compressor multiband 60%",
+        "EQ +3 dB 3 kHz, high shelf +2 dB"
+      ],
+      "macros": {
+        "1": "Brightness",
+        "2": "Width",
+        "3": "Drive",
+        "4": "Reverb send"
+      }
+    },
+    {
+      "name": "HR_RAVE_STAB_001",
+      "role": "Offbeat chord stab",
+      "oscA": "Analog saw, unison 5 detune .10",
+      "oscB": "Basic Shapes square, octave -1, level 22%",
+      "env1": "A0 D170ms S0 R90ms",
+      "filter": "MG Low 12 cutoff 2.4 kHz env2 +35",
+      "fx": [
+        "Distortion Soft Clip 35%",
+        "Chorus 20%",
+        "Reverb plate decay 1.1s mix 18%"
+      ],
+      "macros": {
+        "1": "Cutoff",
+        "2": "Decay",
+        "3": "Drive",
+        "4": "Space"
+      }
+    },
+    {
+      "name": "HR_ACID_001",
+      "role": "303-style acid",
+      "oscA": "Basic Shapes saw, octave -1",
+      "sub": "Sine octave -2 level 12%",
+      "env1": "A0 D220ms S0 R60ms",
+      "env2": "A0 D180ms S0 route +65 to filter",
+      "filter": "Diode 18, cutoff 310 Hz resonance 72% drive 48%",
+      "fx": [
+        "Distortion Diode 1 42%",
+        "Compressor 35%",
+        "Delay 1/8 dotted mix 10%"
+      ],
+      "macros": {
+        "1": "Cutoff",
+        "2": "Resonance",
+        "3": "Drive",
+        "4": "Envelope amount"
+      }
+    },
+    {
+      "name": "HR_SCREECH_001",
+      "role": "Drop screech",
+      "oscA": "Monster-style aggressive wavetable, position 35%, Bend+ 55%",
+      "oscB": "Saw octave +1 level 30%",
+      "env1": "A0 D850ms S25% R140ms",
+      "filter": "Band 12 cutoff 1.6 kHz resonance 55%; LFO1 sweeping cutoff",
+      "fx": [
+        "Distortion Hard Clip 82%",
+        "Phaser 18%",
+        "Compressor multiband 65%",
+        "Reverb 12%"
+      ],
+      "macros": {
+        "1": "Scream wavetable position",
+        "2": "Filter motion",
+        "3": "Distortion",
+        "4": "Space"
+      }
+    },
+    {
+      "name": "HR_RISER_001",
+      "role": "Noise and tonal riser",
+      "oscA": "Saw octave -1; mod wheel maps pitch 0 to +24 semitones",
+      "noise": "BrightWhite 65%",
+      "env1": "A20ms D8s S100% R800ms",
+      "filter": "High 12 starts 180 Hz; mod wheel opens to 12 kHz",
+      "fx": [
+        "Distortion Tube 25%",
+        "Flanger 15%",
+        "Reverb hall 48%",
+        "Compressor 30%"
+      ],
+      "macros": {
+        "1": "Rise mapped pitch and filter",
+        "2": "Noise",
+        "3": "Tension distortion",
+        "4": "Space"
+      }
+    },
+    {
+      "name": "HR_DOWNLIFTER_001",
+      "role": "Transition downlifter",
+      "noise": "BrightWhite 100%",
+      "env1": "A0 D2.8s S0 R500ms",
+      "filter": "Low 24; Env2 closes 14 kHz to 250 Hz",
+      "fx": [
+        "Flanger 20%",
+        "Reverb hall 55%",
+        "Delay 1/4 mix 15%"
+      ],
+      "macros": {
+        "1": "Length",
+        "2": "Filter fall",
+        "3": "Flange",
+        "4": "Reverb"
+      }
+    },
+    {
+      "name": "HR_DARK_PAD_001",
+      "role": "Break atmosphere",
+      "oscA": "Spectral/airy wavetable, unison 7 detune .13",
+      "oscB": "Sine octave -1 level 20%",
+      "env1": "A1.2s D2s S75% R2.5s",
+      "filter": "MG Low 12 2.2 kHz",
+      "fx": [
+        "Chorus 30%",
+        "Reverb hall 55%",
+        "Delay 1/4 mix 18%",
+        "EQ low cut 140 Hz"
+      ],
+      "macros": {
+        "1": "Brightness",
+        "2": "Motion",
+        "3": "Width",
+        "4": "Space"
+      }
+    }
+  ]
+}
